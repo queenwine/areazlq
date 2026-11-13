@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>華語練習簿 – ฝึกและจำลองสอบ TOCFL A1–B2</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📒</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4ecdc;--card:#fffaf0;--ink:#231f1b;--mute:#7a6f63;--line:#d9ccb4;--red:#c8372d;--redtx:#fff;--ok:#2f7d4f;--bad:#b3261e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1815;--card:#26211d;--ink:#f1e8d6;--mute:#a89c8a;--line:#3d352d;--red:#e0584d;--redtx:#1b1815;--ok:#6cc58d;--bad:#ff8a80;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b1815;--card:#26211d;--ink:#f1e8d6;--mute:#a89c8a;--line:#3d352d;--red:#e0584d;--redtx:#1b1815;--ok:#6cc58d;--bad:#ff8a80;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Sarabun',system-ui,sans-serif;line-height:1.6;min-height:100vh;background-image:linear-gradient(var(--line) 1px,transparent 1px);background-size:100% 32px}
+.zh{font-family:'Noto Serif TC','PMingLiU','Songti TC',serif}
+main{max-width:560px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.seal{background:var(--red);color:var(--redtx);width:52px;height:52px;border-radius:8px;display:grid;place-items:center;font-size:26px;font-weight:700;transform:rotate(-4deg);flex:none}
+h1{font-size:1.25rem;margin:0;line-height:1.2}
+header p{margin:2px 0 0;color:var(--mute);font-size:.88rem}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.chip{font:inherit;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:10px;padding:6px 2px;cursor:pointer;line-height:1.25}
+.chip b{display:block;font-size:1.15rem}.chip small{color:var(--mute);font-size:.72rem}
+.chip.on{border-color:var(--red);background:var(--red);color:var(--redtx)}.chip.on small{color:var(--redtx)}
+.stats{display:flex;gap:8px;margin-bottom:14px}
+.stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:.8rem;color:var(--mute)}
+.stat b{display:block;font-size:1.1rem;color:var(--ink)}
+.main-nav{display:flex;gap:8px;margin-bottom:12px}
+.main-nav button{flex:1;font:inherit;font-weight:700;padding:10px;border-radius:10px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
+.main-nav button.on{background:var(--ink);color:var(--bg)}
+nav.sub{display:flex;border-bottom:2px solid var(--ink);margin-bottom:16px}
+nav.sub button{flex:1;background:none;border:0;padding:9px 4px;font:inherit;font-weight:500;color:var(--mute);cursor:pointer;border-radius:8px 8px 0 0}
+nav.sub button.on{background:var(--ink);color:var(--bg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;box-shadow:4px 4px 0 var(--line)}
+.big{font-size:3.2rem;line-height:1.2;text-align:center;margin:10px 0 4px}
+.cen{text-align:center}.mute{color:var(--mute)}
+.py{font-size:1.15rem;text-align:center}.zy{text-align:center;color:var(--mute)}
+.th{font-size:1.45rem;text-align:center;font-weight:700;margin:6px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.row>*{flex:1}
+button.b{font:inherit;font-weight:500;padding:12px 14px;border-radius:10px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer;min-height:48px}
+button.b:disabled{opacity:.55;cursor:default}
+button.pri{background:var(--red);border-color:var(--red);color:var(--redtx)}
+button.opt{width:100%;text-align:left;margin-top:8px}
+button.opt.sel{border-color:var(--red);background:color-mix(in srgb,var(--red) 16%,var(--card))}
+button.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--card))}
+button.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 18%,var(--card))}
+.tog{display:flex;gap:14px;justify-content:center;margin-bottom:8px;font-size:.9rem;color:var(--mute)}.tog input{accent-color:var(--red)}
+.fb{margin-top:12px;font-weight:500}
+.sent{font-size:1.7rem;text-align:center;margin:8px 0}
+.speak{display:block;margin:12px auto;width:88px;height:88px;border-radius:50%;font-size:2.2rem;border:2px solid var(--ink);background:var(--red);color:var(--redtx);cursor:pointer}
+.speak:disabled{opacity:.45}
+.bar{display:flex;justify-content:space-between;font-weight:700;margin-bottom:6px}
+#tm{color:var(--red);font-variant-numeric:tabular-nums}
+.score{font-size:2.6rem;font-weight:700;text-align:center;line-height:1.1}
+.rv{border-top:1px dashed var(--line);padding:10px 0;font-size:.92rem}
+footer{margin-top:22px;font-size:.78rem;color:var(--mute);text-align:center}
+</style>
+</head>
+<body>
+<main>
+<header><div class="seal zh">華</div><div><h1>華語練習簿</h1><p>ฝึกและจำลองสอบ TOCFL ระดับ A1–B2</p></div></header>
+<div class="chips" id="chips"></div>
+<div class="stats" id="stats"></div>
+<div class="main-nav" id="mnav"><button data-m="learn">โหมดฝึก</button><button data-m="mock">จำลองสอบ</button></div>
+<section id="view"></section>
+<footer>ข้อมูลในเว็บเป็นชุดตัวอย่างที่คัดเอง ไม่ใช่รายการทางการของ SC-TOP · ระดับคำศัพท์เป็นการประมาณ<br>แก้ไข/เพิ่มคำและประโยคได้ในโค้ด (W0, RB1, WB2 ฯลฯ) · ความก้าวหน้าบันทึกในเบราว์เซอร์นี้</footer>
+</main>
+<script>
+// [ตัวอักษร, พินอิน, จู้อิน, ไทย]
+const W0=[["你好","nǐ hǎo","ㄋㄧˇ ㄏㄠˇ","สวัสดี"],["謝謝","xièxie","ㄒㄧㄝˋ ㄒㄧㄝ˙","ขอบคุณ"],["對不起","duìbuqǐ","ㄉㄨㄟˋ ㄅㄨ˙ ㄑㄧˇ","ขอโทษ"],["再見","zàijiàn","ㄗㄞˋ ㄐㄧㄢˋ","ลาก่อน"],["學生","xuésheng","ㄒㄩㄝˊ ㄕㄥ˙","นักเรียน"],["老師","lǎoshī","ㄌㄠˇ ㄕ","ครู"],["朋友","péngyou","ㄆㄥˊ ㄧㄡ˙","เพื่อน"],["水","shuǐ","ㄕㄨㄟˇ","น้ำ"],["吃飯","chīfàn","ㄔ ㄈㄢˋ","กินข้าว"],["喝","hē","ㄏㄜ","ดื่ม"],["今天","jīntiān","ㄐㄧㄣ ㄊㄧㄢ","วันนี้"],["明天","míngtiān","ㄇㄧㄥˊ ㄊㄧㄢ","พรุ่งนี้"],["昨天","zuótiān","ㄗㄨㄛˊ ㄊㄧㄢ","เมื่อวาน"],["現在","xiànzài","ㄒㄧㄢˋ ㄗㄞˋ","ตอนนี้"],["多少錢","duōshao qián","ㄉㄨㄛ ㄕㄠ˙ ㄑㄧㄢˊ","ราคาเท่าไหร่"],["便宜","piányi","ㄆㄧㄢˊ ㄧˊ","ถูก"],["貴","guì","ㄍㄨㄟˋ","แพง"],["捷運","jiéyùn","ㄐㄧㄝˊ ㄩㄣˋ","รถไฟฟ้า MRT"],["公車","gōngchē","ㄍㄨㄥ ㄔㄜ","รถเมล์"],["火車","huǒchē","ㄏㄨㄛˇ ㄔㄜ","รถไฟ"],
+["醫院","yīyuàn","ㄧ ㄩㄢˋ","โรงพยาบาล"],["餐廳","cāntīng","ㄘㄢ ㄊㄧㄥ","ร้านอาหาร"],["便利商店","biànlì shāngdiàn","ㄅㄧㄢˋ ㄌㄧˋ ㄕㄤ ㄉㄧㄢˋ","ร้านสะดวกซื้อ"],["喜歡","xǐhuan","ㄒㄧˇ ㄏㄨㄢ˙","ชอบ"],["想","xiǎng","ㄒㄧㄤˇ","อยาก / คิด"],["家","jiā","ㄐㄧㄚ","บ้าน"],["工作","gōngzuò","ㄍㄨㄥ ㄗㄨㄛˋ","ทำงาน / งาน"],["天氣","tiānqì","ㄊㄧㄢ ㄑㄧˋ","อากาศ"],["下雨","xià yǔ","ㄒㄧㄚˋ ㄩˇ","ฝนตก"],["好吃","hǎochī","ㄏㄠˇ ㄔ","อร่อย"],["漂亮","piàoliang","ㄆㄧㄠˋ ㄌㄧㄤ˙","สวย"],["早上","zǎoshang","ㄗㄠˇ ㄕㄤ˙","ตอนเช้า"],["晚上","wǎnshang","ㄨㄢˇ ㄕㄤ˙","ตอนค่ำ"],["星期","xīngqī","ㄒㄧㄥ ㄑㄧ","สัปดาห์ / วัน"],["買","mǎi","ㄇㄞˇ","ซื้อ"],["賣","mài","ㄇㄞˋ","ขาย"],["去","qù","ㄑㄩˋ","ไป"],["來","lái","ㄌㄞˊ","มา"],["書","shū","ㄕㄨ","หนังสือ"],["手機","shǒujī","ㄕㄡˇ ㄐㄧ","มือถือ"]];
+const WB1=[["經驗","jīngyàn","ㄐㄧㄥ ㄧㄢˋ","ประสบการณ์"],["決定","juédìng","ㄐㄩㄝˊ ㄉㄧㄥˋ","ตัดสินใจ"],["習慣","xíguàn","ㄒㄧˊ ㄍㄨㄢˋ","นิสัย / ความเคยชิน"],["環境","huánjìng","ㄏㄨㄢˊ ㄐㄧㄥˋ","สิ่งแวดล้อม"],["健康","jiànkāng","ㄐㄧㄢˋ ㄎㄤ","สุขภาพ"],["邀請","yāoqǐng","ㄧㄠ ㄑㄧㄥˇ","เชิญ"],["準備","zhǔnbèi","ㄓㄨㄣˇ ㄅㄟˋ","เตรียม"],["打算","dǎsuàn","ㄉㄚˇ ㄙㄨㄢˋ","ตั้งใจ / วางแผน"],["特別","tèbié","ㄊㄜˋ ㄅㄧㄝˊ","พิเศษ"],["方便","fāngbiàn","ㄈㄤ ㄅㄧㄢˋ","สะดวก"],["影響","yǐngxiǎng","ㄧㄥˇ ㄒㄧㄤˇ","ส่งผลกระทบ"],["需要","xūyào","ㄒㄩ ㄧㄠˋ","ต้องการ / จำเป็น"],["安排","ānpái","ㄢ ㄆㄞˊ","จัดการ / จัดตาราง"],["了解","liǎojiě","ㄌㄧㄠˇ ㄐㄧㄝˇ","เข้าใจ / รู้จักดี"]];
+const WB2=[["效率","xiàolǜ","ㄒㄧㄠˋ ㄌㄩˋ","ประสิทธิภาพ"],["壓力","yālì","ㄧㄚ ㄌㄧˋ","ความเครียด / แรงกดดัน"],["成績","chéngjī","ㄔㄥˊ ㄐㄧ","ผลการเรียน / ผลงาน"],["增加","zēngjiā","ㄗㄥ ㄐㄧㄚ","เพิ่มขึ้น"],["減少","jiǎnshǎo","ㄐㄧㄢˇ ㄕㄠˇ","ลดลง"],["無論","wúlùn","ㄨˊ ㄌㄨㄣˋ","ไม่ว่าจะ"],["資源","zīyuán","ㄗ ㄩㄢˊ","ทรัพยากร"],["態度","tàidù","ㄊㄞˋ ㄉㄨˋ","ทัศนคติ"],["文化","wénhuà","ㄨㄣˊ ㄏㄨㄚˋ","วัฒนธรรม"],["競爭","jìngzhēng","ㄐㄧㄥˋ ㄓㄥ","แข่งขัน"],["適合","shìhé","ㄕˋ ㄏㄜˊ","เหมาะสม"],["改善","gǎishàn","ㄍㄞˇ ㄕㄢˋ","ปรับปรุงให้ดีขึ้น"]];
+// [ประโยค, ตัวเลือก(ข้อแรก=คำตอบ), คำแปลไทย]
+const R0=[["我想___水。",["喝","吃","去","買"],"ฉันอยากดื่มน้ำ"],["這個很___，我買兩個。",["便宜","貴","漂亮","醫院"],"อันนี้ถูกมาก ฉันซื้อสองอัน"],["我們坐___去學校。",["公車","手機","天氣","餐廳"],"เรานั่งรถเมล์ไปโรงเรียน"],["___天氣很好，我想去朋友家。",["今天","多少錢","喜歡","工作"],"วันนี้อากาศดี ฉันอยากไปบ้านเพื่อน"],["我___買一本書。",["想","來","賣","下雨"],"ฉันอยากซื้อหนังสือหนึ่งเล่ม"],["他在醫院___。",["工作","明天","好吃","晚上"],"เขาทำงานที่โรงพยาบาล"],["這家餐廳的菜很___。",["好吃","便利商店","星期","老師"],"อาหารร้านนี้อร่อยมาก"],["___我要去看醫生。",["明天","漂亮","賣","水"],"พรุ่งนี้ฉันจะไปหาหมอ"],["外面在___，你要帶傘。",["下雨","吃飯","喝","學生"],"ข้างนอกฝนตก คุณต้องเอาร่มไป"],["請問，這本書___錢？",["多少","現在","喜歡","昨天"],"ขอถามหน่อย หนังสือเล่มนี้ราคาเท่าไหร่"],["我___去捷運站。",["要","書","貴","朋友"],"ฉันจะไปสถานีรถไฟฟ้า"],["老師，___！",["謝謝","手機","晚上","公車"],"คุณครู ขอบคุณค่ะ/ครับ"]];
+const RB1=[["我___去日本旅行，已經買好機票了。",["打算","需要","影響","邀請"],"ฉันตั้งใจจะไปเที่ยวญี่ปุ่น ซื้อตั๋วเครื่องบินแล้ว"],["每天運動對___很好。",["健康","決定","邀請","準備"],"ออกกำลังกายทุกวันดีต่อสุขภาพ"],["他的中文很好，因為他有很多學習___。",["經驗","邀請","方便","打算"],"จีนของเขาดีเพราะมีประสบการณ์เรียนมาก"],["這裡離捷運站很近，交通很___。",["方便","特別","準備","決定"],"ที่นี่ใกล้สถานีรถไฟฟ้า เดินทางสะดวกมาก"],["謝謝你___我參加你的生日派對。",["邀請","準備","影響","決定"],"ขอบคุณที่เชิญฉันไปงานวันเกิด"],["考試前，我們要好好___。",["準備","邀請","特別","方便"],"ก่อนสอบเราต้องเตรียมตัวให้ดี"]];
+const RB2=[["工作___太大，他晚上常常睡不著。",["壓力","效率","資源","態度"],"งานกดดันมาก เขาจึงมักนอนไม่หลับตอนกลางคืน"],["這家公司想用新方法提高工作___。",["效率","壓力","文化","成績"],"บริษัทนี้อยากใช้วิธีใหม่เพิ่มประสิทธิภาพการทำงาน"],["___天氣怎麼樣，我們都要出發。",["無論","適合","改善","增加"],"ไม่ว่าอากาศเป็นอย่างไร เราก็ต้องออกเดินทาง"],["台灣夏天很熱，用電量每年都___。",["增加","減少","改善","適合"],"ฤดูร้อนไต้หวันร้อน ปริมาณการใช้ไฟเพิ่มขึ้นทุกปี"],["要了解一個國家，先要了解它的___。",["文化","壓力","成績","效率"],"จะเข้าใจประเทศหนึ่งต้องเข้าใจวัฒนธรรมของประเทศนั้นก่อน"]];
+const L={A1:{w:W0.slice(0,20),r:R0.slice(0,6),s:"Level 1"},A2:{w:W0.slice(20).concat(W0.slice(10,20)),r:R0.slice(6),s:"Level 2"},B1:{w:WB1,r:RB1,s:"Level 3"},B2:{w:WB2,r:RB2,s:"Level 4"}};
+const $=s=>document.querySelector(s);
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+let S={lv:'A2',box:{},st:{},best:{},py:true,zy:true};
+try{const x=localStorage.getItem('tocfl-v2');if(x)S=Object.assign(S,JSON.parse(x))}catch(e){}
+const save=()=>{try{localStorage.setItem('tocfl-v2',JSON.stringify(S))}catch(e){}};
+const lv=()=>L[S.lv], st=()=>S.st[S.lv]||(S.st[S.lv]={ok:0,n:0});
+function say(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='zh-TW';u.rate=.85;speechSynthesis.speak(u)}catch(e){}}
+let mode='learn',sub='card',cur=0,flip=false,q=null,M=null,tmr=null;
+// สร้างข้อสอบ: {say, p(โจทย์ html), o[ตัวเลือก], a(index คำตอบ), ex(เฉลย)}
+function mk(sayT,p,opts,ex){const o=sh(opts);return{say:sayT,p,o,a:o.indexOf(opts[0]),ex}}
+function qL(){const l=lv();if(Math.random()<.5&&l.r.length>=4){const r=pick(l.r),t=r[0].replace('___',r[1][0]);return mk(t,'ฟังประโยค แล้วเลือกความหมายที่ถูกต้อง',[r[2],...sh(l.r.filter(x=>x!==r)).slice(0,3).map(x=>x[2])],t+' = '+r[2])}
+const w=pick(l.w);return mk(w[0],'ฟังคำ แล้วเลือกความหมายที่ถูกต้อง',[w[3],...sh(l.w.filter(x=>x[3]!==w[3])).slice(0,3).map(x=>x[3])],w[0]+' ('+w[1]+') = '+w[3])}
+function qR(){const l=lv();if(Math.random()<.55){const r=pick(l.r);return mk(null,'<div class="sent zh">'+r[0].replace('___','<span style="border-bottom:3px solid var(--red);padding:0 .8em"> </span>')+'</div>',r[1],r[0].replace('___',r[1][0])+' = '+r[2])}
+const w=pick(l.w);return mk(null,'<div class="big zh" style="font-size:2.6rem">'+w[0]+'</div><div class="py">'+w[1]+'</div>',[w[3],...sh(l.w.filter(x=>x[3]!==w[3])).slice(0,3).map(x=>x[3])],w[0]+' = '+w[3])}
+function gen(k,n){const a=[],seen=new Set();for(let t=0;t<400&&a.length<n;t++){const x=k==='L'?qL():qR(),key=x.say||x.p;if(!seen.has(key)){seen.add(key);a.push(x)}}return a}
+function pickWord(ex){const idx=lv().w.map((w,i)=>i).filter(i=>i!==ex),pool=idx.filter(i=>(S.box[lv().w[i][0]]||0)<3);return pick(pool.length?pool:idx)}
+function setLv(k){S.lv=k;save();M=null;clearInterval(tmr);q=null;cur=pickWord(-1);flip=false;render()}
+function chrome(){$('#chips').innerHTML=Object.keys(L).map(k=>`<button class="chip ${k===S.lv?'on':''}" onclick="setLv('${k}')"><b>${k}</b><small>${L[k].s}</small></button>`).join('');
+const k=lv().w.filter(w=>(S.box[w[0]]||0)>=3).length,s=st();
+$('#stats').innerHTML=`<div class="stat">จำได้แล้ว<b>${k}/${lv().w.length}</b></div><div class="stat">ทำแบบฝึกหัด<b>${s.n}</b></div><div class="stat">ตอบถูก<b>${s.n?Math.round(s.ok/s.n*100)+'%':'–'}</b></div>`;
+document.querySelectorAll('#mnav button').forEach(b=>b.classList.toggle('on',b.dataset.m===mode))}
+function opts(x,pickI,done,fn){return x.o.map((c,i)=>`<button class="b opt ${done?(i===x.a?'right':i===pickI?'wrong':''):(i===pickI?'sel':'')}" ${done?'disabled':''} onclick="${fn}(${i})">${c}</button>`).join('')}
+function render(){chrome();const v=$('#view');
+if(mode==='mock')return mockView(v);
+const nav=`<nav class="sub">${[['card','การ์ดคำศัพท์'],['listen','ฝึกฟัง'],['read','ฝึกอ่าน']].map(([k,t])=>`<button class="${k===sub?'on':''}" onclick="sub='${k}';q=null;render()">${t}</button>`).join('')}</nav>`;
+if(sub==='card'){const w=lv().w[cur];
+v.innerHTML=nav+`<div class="tog"><label><input type="checkbox" ${S.py?'checked':''} onchange="S.py=this.checked;save();render()"> พินอิน</label><label><input type="checkbox" ${S.zy?'checked':''} onchange="S.zy=this.checked;save();render()"> จู้อิน</label></div>
+<div class="card" onclick="flip=!flip;render()" style="cursor:pointer"><div class="big zh">${w[0]}</div>${S.py?`<div class="py">${w[1]}</div>`:''}${S.zy?`<div class="zy">${w[2]}</div>`:''}<div class="th">${flip?w[3]:'<span class="mute" style="font-size:1rem;font-weight:400">แตะการ์ดเพื่อดูความหมาย</span>'}</div></div>
+<div class="row"><button class="b" onclick="say(lv().w[cur][0])">🔊 ฟังเสียง</button></div>
+<div class="row"><button class="b" onclick="rate(0)">ยังจำไม่ได้</button><button class="b pri" onclick="rate(1)">จำได้แล้ว</button></div>`;return}
+if(!q){q=sub==='listen'?gen('L',1)[0]:gen('R',1)[0];if(sub==='listen')setTimeout(()=>say(q.say),250)}
+v.innerHTML=nav+`<div class="card"><p class="cen mute">${sub==='listen'?q.p:'เลือกคำตอบที่ถูกต้อง'}</p>${sub==='listen'?`<button class="speak" onclick="say(q.say)" aria-label="ฟังอีกครั้ง">🔊</button>`:q.p}
+${opts(q,q.pick,q.done,'ans')}${q.done?`<div class="fb"><span class="zh">${q.ex}</span></div><div class="row"><button class="b pri" onclick="q=null;render()">ข้อต่อไป</button></div>`:''}</div>`}
+function rate(g){const k=lv().w[cur][0];S.box[k]=g?Math.min((S.box[k]||0)+1,4):0;save();cur=pickWord(cur);flip=false;render()}
+function ans(i){q.done=true;q.pick=i;const s=st();s.n++;if(i===q.a)s.ok++;save();render()}
+// ---------- จำลองสอบ ----------
+const NQ=10,MIN=12;
+function startMock(){M={ph:'L',i:0,qs:{L:gen('L',NQ),R:gen('R',NQ)},a:{L:[],R:[]},pl:{}};timer();render()}
+function timer(){M.end=Date.now()+MIN*60000;clearInterval(tmr);tmr=setInterval(()=>{const s=Math.max(0,Math.round((M.end-Date.now())/1000)),e=$('#tm');if(e)e.textContent=fmt(s);if(s<=0)nextSec()},1000)}
+const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+function nextSec(){if(M.ph==='L'){M.ph='R';M.i=0;timer()}else{clearInterval(tmr);M.ph='done';const r=sc();S.best[S.lv]=Math.max(S.best[S.lv]||0,r.L+r.R);save()}render()}
+const sc=()=>({L:M.qs.L.filter((x,i)=>M.a.L[i]===x.a).length,R:M.qs.R.filter((x,i)=>M.a.R[i]===x.a).length});
+function pk(i){M.a[M.ph][M.i]=i;render()}
+function go(d){M.i+=d;render()}
+function playM(){if(M.pl[M.i])return;M.pl[M.i]=1;say(M.qs.L[M.i].say);render()}
+function mockView(v){
+if(!M){const b=S.best[S.lv];v.innerHTML=`<div class="card"><h2 style="margin:0 0 8px">จำลองสอบระดับ ${S.lv} (${lv().s})</h2>
+<p>แบ่งเป็น 2 ส่วนเหมือนข้อสอบจริง คือ <b>ฟัง</b> แล้วตามด้วย <b>อ่าน</b> ส่วนละ ${NQ} ข้อ เวลาส่วนละ ${MIN} นาที</p>
+<p class="mute">กติกา: ข้อฟังเล่นเสียงได้ครั้งเดียว ไม่มีเฉลยระหว่างสอบ กลับไปแก้ข้อก่อนหน้าได้ในส่วนเดียวกัน เมื่อหมดเวลาจะข้ามส่วนต่อไปอัตโนมัติ</p>
+<p class="mute">ข้อสอบจริงมี 50 ข้อต่อส่วน ใช้เวลาประมาณ 60 นาทีต่อส่วน ชุดนี้เป็นฉบับย่อสำหรับซ้อมความเคยชิน</p>
+${b!=null?`<p>คะแนนสูงสุดของระดับนี้: <b>${b}/${NQ*2}</b></p>`:''}<div class="row"><button class="b pri" onclick="startMock()">เริ่มทำข้อสอบ</button></div></div>`;return}
+if(M.ph==='done'){const r=sc(),tot=r.L+r.R,pct=Math.round(tot/(NQ*2)*100);
+const rv=['L','R'].flatMap(k=>M.qs[k].map((x,i)=>[k,x,M.a[k][i]])).filter(([k,x,a])=>a!==x.a).map(([k,x,a])=>`<div class="rv"><b>${k==='L'?'ฟัง':'อ่าน'}</b> · <span class="zh">${x.ex}</span><br><span class="mute">คุณตอบ: ${a==null?'ไม่ได้ตอบ':x.o[a]} · ที่ถูก: ${x.o[x.a]}</span></div>`).join('');
+v.innerHTML=`<div class="card"><p class="cen mute" style="margin:0">ผลจำลองสอบระดับ ${S.lv}</p><div class="score">${tot}/${NQ*2}</div><p class="cen">${pct}% · ฟัง ${r.L}/${NQ} · อ่าน ${r.R}/${NQ}</p>
+<p class="mute cen" style="font-size:.85rem">เกณฑ์ผ่านจริงเป็นคะแนนสเกลของ TOCFL ซึ่งแปลงจากข้อสอบเต็ม ตัวเลขนี้ใช้ดูพัฒนาการของคุณเท่านั้น ไม่ใช่การทำนายว่าสอบผ่าน</p>
+${rv?`<h3 style="margin:14px 0 0">ข้อที่ผิด / ไม่ได้ตอบ</h3>${rv}`:'<p class="cen"><b>ถูกทุกข้อ</b></p>'}<div class="row"><button class="b pri" onclick="M=null;render()">กลับ</button><button class="b" onclick="startMock()">สอบอีกชุด</button></div></div>`;return}
+const k=M.ph,x=M.qs[k][M.i],a=M.a[k][M.i],last=M.i===NQ-1;
+const s=Math.max(0,Math.round((M.end-Date.now())/1000));
+v.innerHTML=`<div class="bar"><span>${k==='L'?'ส่วนฟัง':'ส่วนอ่าน'} · ข้อ ${M.i+1}/${NQ}</span><span id="tm">${fmt(s)}</span></div><div class="card">
+${k==='L'?`<p class="cen mute" style="margin:0">${x.p}</p><button class="speak" ${M.pl[M.i]?'disabled':''} onclick="playM()" aria-label="เล่นเสียง">🔊</button><p class="cen mute" style="margin:0;font-size:.85rem">${M.pl[M.i]?'เล่นไปแล้ว (เล่นได้ครั้งเดียว)':'กดเล่นเสียง (ครั้งเดียว)'}</p>`:x.p}
+${opts(x,a,false,'pk')}
+<div class="row">${M.i>0?`<button class="b" onclick="go(-1)">ก่อนหน้า</button>`:''}${last?`<button class="b pri" onclick="nextSec()">${k==='L'?'ส่งส่วนฟัง → ไปส่วนอ่าน':'ส่งข้อสอบ'}</button>`:`<button class="b pri" onclick="go(1)">ถัดไป</button>`}</div></div>`}
+$('#mnav').onclick=e=>{const m=e.target.dataset.m;if(!m)return;if(M&&M.ph!=='done'&&m==='learn'&&!confirm('ออกจากการสอบ? ความคืบหน้าจะหายไป'))return;mode=m;if(m==='learn'){M=null;clearInterval(tmr)}render()};
+cur=pickWord(-1);render();
+</script>
+</body>
+</html>
