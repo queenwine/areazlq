@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>華語練習簿 – ฝึกอ่านและจำลองสอบ TOCFL A1–B2</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📒</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4ecdc;--card:#fffaf0;--ink:#231f1b;--mute:#7a6f63;--line:#d9ccb4;--red:#c8372d;--redtx:#fff;--ok:#2f7d4f;--bad:#b3261e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1815;--card:#26211d;--ink:#f1e8d6;--mute:#a89c8a;--line:#3d352d;--red:#e0584d;--redtx:#1b1815;--ok:#6cc58d;--bad:#ff8a80;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b1815;--card:#26211d;--ink:#f1e8d6;--mute:#a89c8a;--line:#3d352d;--red:#e0584d;--redtx:#1b1815;--ok:#6cc58d;--bad:#ff8a80;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Sarabun',system-ui,sans-serif;line-height:1.6;min-height:100vh;background-image:linear-gradient(var(--line) 1px,transparent 1px);background-size:100% 32px}
+.zh{font-family:'Noto Serif TC','PMingLiU','Songti TC',serif}
+main{max-width:560px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.seal{background:var(--red);color:var(--redtx);width:52px;height:52px;border-radius:8px;display:grid;place-items:center;font-size:26px;font-weight:700;transform:rotate(-4deg);flex:none}
+h1{font-size:1.25rem;margin:0;line-height:1.2}
+header p{margin:2px 0 0;color:var(--mute);font-size:.88rem}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.chip{font:inherit;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:10px;padding:6px 2px;cursor:pointer;line-height:1.25}
+.chip b{display:block;font-size:1.15rem}.chip small{color:var(--mute);font-size:.72rem}
+.chip.on{border-color:var(--red);background:var(--red);color:var(--redtx)}.chip.on small{color:var(--redtx)}
+.stats{display:flex;gap:8px;margin-bottom:14px}
+.stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:.8rem;color:var(--mute)}
+.stat b{display:block;font-size:1.1rem;color:var(--ink)}
+.main-nav{display:flex;gap:8px;margin-bottom:12px}
+.main-nav button{flex:1;font:inherit;font-weight:700;padding:10px;border-radius:10px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
+.main-nav button.on{background:var(--ink);color:var(--bg)}
+nav.sub{display:flex;border-bottom:2px solid var(--ink);margin-bottom:16px}
+nav.sub button{flex:1;background:none;border:0;padding:9px 4px;font:inherit;font-weight:500;color:var(--mute);cursor:pointer;border-radius:8px 8px 0 0}
+nav.sub button.on{background:var(--ink);color:var(--bg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;box-shadow:4px 4px 0 var(--line)}
+.big{font-size:3.2rem;line-height:1.2;text-align:center;margin:10px 0 4px}
+.cen{text-align:center}.mute{color:var(--mute)}
+.py{font-size:1.15rem;text-align:center}.zy{text-align:center;color:var(--mute)}
+.th{font-size:1.45rem;text-align:center;font-weight:700;margin:6px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.row>*{flex:1}
+button.b{font:inherit;font-weight:500;padding:12px 14px;border-radius:10px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer;min-height:48px}
+button.b:disabled{opacity:.55;cursor:default}
+button.pri{background:var(--red);border-color:var(--red);color:var(--redtx)}
+button.opt{width:100%;text-align:left;margin-top:8px}
+button.opt.sel{border-color:var(--red);background:color-mix(in srgb,var(--red) 16%,var(--card))}
+button.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--card))}
+button.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 18%,var(--card))}
+.tog{display:flex;gap:14px;justify-content:center;margin-bottom:8px;font-size:.9rem;color:var(--mute)}.tog input{accent-color:var(--red)}
+.fb{margin-top:12px;font-weight:500}
+.sent{font-size:1.7rem;text-align:center;margin:8px 0}
+.speak{display:block;margin:12px auto;width:88px;height:88px;border-radius:50%;font-size:2.2rem;border:2px solid var(--ink);background:var(--red);color:var(--redtx);cursor:pointer}
+.speak:disabled{opacity:.45}
+.bar{display:flex;justify-content:space-between;font-weight:700;margin-bottom:6px}
+#tm{color:var(--red);font-variant-numeric:tabular-nums}
+.score{font-size:2.6rem;font-weight:700;text-align:center;line-height:1.1}
+.rv{border-top:1px dashed var(--line);padding:10px 0;font-size:.92rem}
+footer{margin-top:22px;font-size:.78rem;color:var(--mute);text-align:center}
+.psg{font-size:1.15rem;line-height:2;padding:12px;border:1px dashed var(--line);border-radius:10px;background:var(--bg)}.blk{color:var(--red)}.gap{display:inline-block;border-bottom:3px solid var(--red);padding:0 .8em;min-width:2em}</style>
+</head>
+<body>
+<main>
+<header><div class="seal zh">華</div><div><h1>華語練習簿</h1><p>ฝึกอ่านและจำลองสอบ TOCFL ระดับ A1–B2</p></div></header>
+<div class="chips" id="chips"></div>
+<div class="stats" id="stats"></div>
+<div class="main-nav" id="mnav"><button data-m="learn">โหมดฝึก</button><button data-m="mock">จำลองสอบ</button></div>
+<div id="note"></div><section id="view"></section>
+<footer>ข้อมูลส่วนใหญ่เป็นชุดตัวอย่างที่คัดเอง ยกเว้นโจทย์ที่ระบุว่าจาก SC-TOP · ระดับคำศัพท์เป็นการประมาณ<br>แก้ไข/เพิ่มคำและประโยคได้ในโค้ด (W0, R0, P ฯลฯ) · ความก้าวหน้าบันทึกในเบราว์เซอร์นี้</footer>
+</main>
+<script>
+// [ตัวอักษร, พินอิน, จู้อิน, ไทย]
+const W0=[["你好","nǐ hǎo","ㄋㄧˇ ㄏㄠˇ","สวัสดี"],["謝謝","xièxie","ㄒㄧㄝˋ ㄒㄧㄝ˙","ขอบคุณ"],["對不起","duìbuqǐ","ㄉㄨㄟˋ ㄅㄨ˙ ㄑㄧˇ","ขอโทษ"],["再見","zàijiàn","ㄗㄞˋ ㄐㄧㄢˋ","ลาก่อน"],["學生","xuésheng","ㄒㄩㄝˊ ㄕㄥ˙","นักเรียน"],["老師","lǎoshī","ㄌㄠˇ ㄕ","ครู"],["朋友","péngyou","ㄆㄥˊ ㄧㄡ˙","เพื่อน"],["水","shuǐ","ㄕㄨㄟˇ","น้ำ"],["吃飯","chīfàn","ㄔ ㄈㄢˋ","กินข้าว"],["喝","hē","ㄏㄜ","ดื่ม"],["今天","jīntiān","ㄐㄧㄣ ㄊㄧㄢ","วันนี้"],["明天","míngtiān","ㄇㄧㄥˊ ㄊㄧㄢ","พรุ่งนี้"],["昨天","zuótiān","ㄗㄨㄛˊ ㄊㄧㄢ","เมื่อวาน"],["現在","xiànzài","ㄒㄧㄢˋ ㄗㄞˋ","ตอนนี้"],["多少錢","duōshao qián","ㄉㄨㄛ ㄕㄠ˙ ㄑㄧㄢˊ","ราคาเท่าไหร่"],["便宜","piányi","ㄆㄧㄢˊ ㄧˊ","ถูก"],["貴","guì","ㄍㄨㄟˋ","แพง"],["捷運","jiéyùn","ㄐㄧㄝˊ ㄩㄣˋ","รถไฟฟ้า MRT"],["公車","gōngchē","ㄍㄨㄥ ㄔㄜ","รถเมล์"],["火車","huǒchē","ㄏㄨㄛˇ ㄔㄜ","รถไฟ"],
+["醫院","yīyuàn","ㄧ ㄩㄢˋ","โรงพยาบาล"],["餐廳","cāntīng","ㄘㄢ ㄊㄧㄥ","ร้านอาหาร"],["便利商店","biànlì shāngdiàn","ㄅㄧㄢˋ ㄌㄧˋ ㄕㄤ ㄉㄧㄢˋ","ร้านสะดวกซื้อ"],["喜歡","xǐhuan","ㄒㄧˇ ㄏㄨㄢ˙","ชอบ"],["想","xiǎng","ㄒㄧㄤˇ","อยาก / คิด"],["家","jiā","ㄐㄧㄚ","บ้าน"],["工作","gōngzuò","ㄍㄨㄥ ㄗㄨㄛˋ","ทำงาน / งาน"],["天氣","tiānqì","ㄊㄧㄢ ㄑㄧˋ","อากาศ"],["下雨","xià yǔ","ㄒㄧㄚˋ ㄩˇ","ฝนตก"],["好吃","hǎochī","ㄏㄠˇ ㄔ","อร่อย"],["漂亮","piàoliang","ㄆㄧㄠˋ ㄌㄧㄤ˙","สวย"],["早上","zǎoshang","ㄗㄠˇ ㄕㄤ˙","ตอนเช้า"],["晚上","wǎnshang","ㄨㄢˇ ㄕㄤ˙","ตอนค่ำ"],["星期","xīngqī","ㄒㄧㄥ ㄑㄧ","สัปดาห์ / วัน"],["買","mǎi","ㄇㄞˇ","ซื้อ"],["賣","mài","ㄇㄞˋ","ขาย"],["去","qù","ㄑㄩˋ","ไป"],["來","lái","ㄌㄞˊ","มา"],["書","shū","ㄕㄨ","หนังสือ"],["手機","shǒujī","ㄕㄡˇ ㄐㄧ","มือถือ"]];
+const WB1=[["經驗","jīngyàn","ㄐㄧㄥ ㄧㄢˋ","ประสบการณ์"],["決定","juédìng","ㄐㄩㄝˊ ㄉㄧㄥˋ","ตัดสินใจ"],["習慣","xíguàn","ㄒㄧˊ ㄍㄨㄢˋ","นิสัย / ความเคยชิน"],["環境","huánjìng","ㄏㄨㄢˊ ㄐㄧㄥˋ","สิ่งแวดล้อม"],["健康","jiànkāng","ㄐㄧㄢˋ ㄎㄤ","สุขภาพ"],["邀請","yāoqǐng","ㄧㄠ ㄑㄧㄥˇ","เชิญ"],["準備","zhǔnbèi","ㄓㄨㄣˇ ㄅㄟˋ","เตรียม"],["打算","dǎsuàn","ㄉㄚˇ ㄙㄨㄢˋ","ตั้งใจ / วางแผน"],["特別","tèbié","ㄊㄜˋ ㄅㄧㄝˊ","พิเศษ"],["方便","fāngbiàn","ㄈㄤ ㄅㄧㄢˋ","สะดวก"],["影響","yǐngxiǎng","ㄧㄥˇ ㄒㄧㄤˇ","ส่งผลกระทบ"],["需要","xūyào","ㄒㄩ ㄧㄠˋ","ต้องการ / จำเป็น"],["安排","ānpái","ㄢ ㄆㄞˊ","จัดการ / จัดตาราง"],["了解","liǎojiě","ㄌㄧㄠˇ ㄐㄧㄝˇ","เข้าใจ / รู้จักดี"]];
+const WB2=[["效率","xiàolǜ","ㄒㄧㄠˋ ㄌㄩˋ","ประสิทธิภาพ"],["壓力","yālì","ㄧㄚ ㄌㄧˋ","ความเครียด / แรงกดดัน"],["成績","chéngjī","ㄔㄥˊ ㄐㄧ","ผลการเรียน / ผลงาน"],["增加","zēngjiā","ㄗㄥ ㄐㄧㄚ","เพิ่มขึ้น"],["減少","jiǎnshǎo","ㄐㄧㄢˇ ㄕㄠˇ","ลดลง"],["無論","wúlùn","ㄨˊ ㄌㄨㄣˋ","ไม่ว่าจะ"],["資源","zīyuán","ㄗ ㄩㄢˊ","ทรัพยากร"],["態度","tàidù","ㄊㄞˋ ㄉㄨˋ","ทัศนคติ"],["文化","wénhuà","ㄨㄣˊ ㄏㄨㄚˋ","วัฒนธรรม"],["競爭","jìngzhēng","ㄐㄧㄥˋ ㄓㄥ","แข่งขัน"],["適合","shìhé","ㄕˋ ㄏㄜˊ","เหมาะสม"],["改善","gǎishàn","ㄍㄞˇ ㄕㄢˋ","ปรับปรุงให้ดีขึ้น"]];
+// [ประโยค, ตัวเลือก(ข้อแรก=คำตอบ), คำแปลไทย]
+const R0=[["我想___水。",["喝","吃","去","買"],"ฉันอยากดื่มน้ำ"],["這個很___，我買兩個。",["便宜","貴","漂亮","醫院"],"อันนี้ถูกมาก ฉันซื้อสองอัน"],["我們坐___去學校。",["公車","手機","天氣","餐廳"],"เรานั่งรถเมล์ไปโรงเรียน"],["___天氣很好，我想去朋友家。",["今天","多少錢","喜歡","工作"],"วันนี้อากาศดี ฉันอยากไปบ้านเพื่อน"],["我___買一本書。",["想","來","賣","下雨"],"ฉันอยากซื้อหนังสือหนึ่งเล่ม"],["他在醫院___。",["工作","明天","好吃","晚上"],"เขาทำงานที่โรงพยาบาล"],["這家餐廳的菜很___。",["好吃","便利商店","星期","老師"],"อาหารร้านนี้อร่อยมาก"],["___我要去看醫生。",["明天","漂亮","賣","水"],"พรุ่งนี้ฉันจะไปหาหมอ"],["外面在___，你要帶傘。",["下雨","吃飯","喝","學生"],"ข้างนอกฝนตก คุณต้องเอาร่มไป"],["請問，這本書___錢？",["多少","現在","喜歡","昨天"],"ขอถามหน่อย หนังสือเล่มนี้ราคาเท่าไหร่"],["我___去捷運站。",["要","書","貴","朋友"],"ฉันจะไปสถานีรถไฟฟ้า"],["老師，___！",["謝謝","手機","晚上","公車"],"คุณครู ขอบคุณค่ะ/ครับ"]];
+const RB1=[["我___去日本旅行，已經買好機票了。",["打算","需要","影響","邀請"],"ฉันตั้งใจจะไปเที่ยวญี่ปุ่น ซื้อตั๋วเครื่องบินแล้ว"],["每天運動對___很好。",["健康","決定","邀請","準備"],"ออกกำลังกายทุกวันดีต่อสุขภาพ"],["他的中文很好，因為他有很多學習___。",["經驗","邀請","方便","打算"],"จีนของเขาดีเพราะมีประสบการณ์เรียนมาก"],["這裡離捷運站很近，交通很___。",["方便","特別","準備","決定"],"ที่นี่ใกล้สถานีรถไฟฟ้า เดินทางสะดวกมาก"],["謝謝你___我參加你的生日派對。",["邀請","準備","影響","決定"],"ขอบคุณที่เชิญฉันไปงานวันเกิด"],["考試前，我們要好好___。",["準備","邀請","特別","方便"],"ก่อนสอบเราต้องเตรียมตัวให้ดี"]];
+const RB2=[["工作___太大，他晚上常常睡不著。",["壓力","效率","資源","態度"],"งานกดดันมาก เขาจึงมักนอนไม่หลับตอนกลางคืน"],["這家公司想用新方法提高工作___。",["效率","壓力","文化","成績"],"บริษัทนี้อยากใช้วิธีใหม่เพิ่มประสิทธิภาพการทำงาน"],["___天氣怎麼樣，我們都要出發。",["無論","適合","改善","增加"],"ไม่ว่าอากาศเป็นอย่างไร เราก็ต้องออกเดินทาง"],["台灣夏天很熱，用電量每年都___。",["增加","減少","改善","適合"],"ฤดูร้อนไต้หวันร้อน ปริมาณการใช้ไฟเพิ่มขึ้นทุกปี"],["要了解一個國家，先要了解它的___。",["文化","壓力","成績","效率"],"จะเข้าใจประเทศหนึ่งต้องเข้าใจวัฒนธรรมของประเทศนั้นก่อน"]];
+const L={A1:{w:W0.slice(0,20),r:R0.slice(0,6),s:"Level 1"},A2:{w:W0.slice(20).concat(W0.slice(10,20)),r:R0.slice(6),s:"Level 2"},B1:{w:WB1,r:RB1,s:"Level 3"},B2:{w:WB2,r:RB2,s:"Level 4"}};
+const $=s=>document.querySelector(s);
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+let S={lv:'A2',box:{},st:{},best:{},py:true,zy:true,rpy:true,bestR:{}};
+try{const x=localStorage.getItem('tocfl-v2');if(x)S=Object.assign(S,JSON.parse(x))}catch(e){}
+const save=()=>{try{localStorage.setItem('tocfl-v2',JSON.stringify(S))}catch(e){}};
+const lv=()=>L[S.lv], st=()=>S.st[S.lv]||(S.st[S.lv]={ok:0,n:0});
+let VO=null;
+function loadV(){try{const vs=speechSynthesis.getVoices();VO=vs.find(v=>/zh[-_]TW/i.test(v.lang))||vs.find(v=>/zh[-_]HK/i.test(v.lang))||vs.find(v=>/^zh/i.test(v.lang))||null}catch(e){}}
+try{speechSynthesis.onvoiceschanged=loadV;loadV()}catch(e){}
+const MSG='ถ้าไม่ได้ยินเสียง: ตรวจสอบว่าเปิดเสียงและไม่ได้อยู่โหมดเงียบ (iPhone ต้องปิดสวิตช์เงียบ) และเครื่องอาจยังไม่มีเสียงภาษาจีน · Windows: Settings > Time & language > Speech เพิ่มเสียงจีน (ไต้หวัน) · Android: ติดตั้ง Speech Services by Google แล้วโหลดข้อมูลเสียงภาษาจีน · iPhone/Mac: Settings > Accessibility > Spoken Content > Voices > Chinese';
+function note(m){const n=$('#note');if(n)n.innerHTML=m?`<div class="card" style="margin-bottom:12px;padding:12px 14px;box-shadow:none;font-size:.85rem">${m}</div>`:''}
+function say(t){if(!('speechSynthesis' in window)){note('เบราว์เซอร์นี้ไม่รองรับเสียงอ่าน ลองเปิดด้วย Chrome, Edge หรือ Safari');return}
+loadV();const u=new SpeechSynthesisUtterance(t);u.lang=VO?VO.lang:'zh-TW';if(VO)u.voice=VO;u.rate=.85;u.onerror=()=>note(MSG);note(VO?'':MSG);
+try{speechSynthesis.cancel();setTimeout(()=>{try{speechSynthesis.resume();speechSynthesis.speak(u)}catch(e){}},80)}catch(e){}}
+const PY={};[...W0,...WB1,...WB2].forEach(w=>PY[w[0]]=w[1]);Object.assign(PY,{'吃':'chī','要':'yào','多少':'duōshao'});
+const SP={"我想___水。": "wǒ xiǎng ___ shuǐ.", "這個很___，我買兩個。": "zhège hěn ___, wǒ mǎi liǎng ge.", "我們坐___去學校。": "wǒmen zuò ___ qù xuéxiào.", "___天氣很好，我想去朋友家。": "___ tiānqì hěn hǎo, wǒ xiǎng qù péngyou jiā.", "我___買一本書。": "wǒ ___ mǎi yì běn shū.", "他在醫院___。": "tā zài yīyuàn ___.", "這家餐廳的菜很___。": "zhè jiā cāntīng de cài hěn ___.", "___我要去看醫生。": "___ wǒ yào qù kàn yīshēng.", "外面在___，你要帶傘。": "wàimiàn zài ___, nǐ yào dài sǎn.", "請問，這本書___錢？": "qǐngwèn, zhè běn shū ___ qián?", "我___去捷運站。": "wǒ ___ qù jiéyùn zhàn.", "老師，___！": "lǎoshī, ___!", "我___去日本旅行，已經買好機票了。": "wǒ ___ qù Rìběn lǚxíng, yǐjīng mǎi hǎo jīpiào le.", "每天運動對___很好。": "měitiān yùndòng duì ___ hěn hǎo.", "他的中文很好，因為他有很多學習___。": "tā de Zhōngwén hěn hǎo, yīnwèi tā yǒu hěn duō xuéxí ___.", "這裡離捷運站很近，交通很___。": "zhèlǐ lí jiéyùn zhàn hěn jìn, jiāotōng hěn ___.", "謝謝你___我參加你的生日派對。": "xièxie nǐ ___ wǒ cānjiā nǐ de shēngrì pàiduì.", "考試前，我們要好好___。": "kǎoshì qián, wǒmen yào hǎohāo ___.", "工作___太大，他晚上常常睡不著。": "gōngzuò ___ tài dà, tā wǎnshang chángcháng shuì bù zháo.", "這家公司想用新方法提高工作___。": "zhè jiā gōngsī xiǎng yòng xīn fāngfǎ tígāo gōngzuò ___.", "___天氣怎麼樣，我們都要出發。": "___ tiānqì zěnmeyàng, wǒmen dōu yào chūfā.", "台灣夏天很熱，用電量每年都___。": "Táiwān xiàtiān hěn rè, yòngdiànliàng měi nián dōu ___.", "要了解一個國家，先要了解它的___。": "yào liǎojiě yí ge guójiā, xiān yào liǎojiě tā de ___."};
+const pyBox=()=>`<div class="tog"><label><input type="checkbox" ${S.rpy?'checked':''} onchange="S.rpy=this.checked;save();render()"> แสดงพินอิน</label></div>`;
+const rbody=x=>x.p+(S.rpy&&x.pyl?`<div class="py mute">${x.pyl}</div>`:'');
+const P={"A1": {"c": [{"k": "完成段落", "t": "我有一個朋友，他叫大明。{1}我們每天一起坐公車去學校。", "b": [["他是我的同學。", "他喜歡喝水。", "明天我要去醫院。"]], "th": "ฉันมีเพื่อนคนหนึ่งชื่อต้าหมิง เขาเป็นเพื่อนร่วมชั้นของฉัน เราไปโรงเรียนด้วยรถเมล์ด้วยกันทุกวัน"}, {"k": "選詞填空", "t": "小美是{1}。她家在台北。她每天坐{2}去學校。今天天氣很好，她和朋友去{3}。", "b": [["學生", "老師", "醫院"], ["公車", "手機", "書"], ["吃飯", "下雨", "便宜"]], "th": "เสี่ยวเหม่ยเป็นนักเรียน บ้านอยู่ไทเป ทุกวันนั่งรถเมล์ไปโรงเรียน วันนี้อากาศดี เธอกับเพื่อนไปกินข้าว"}], "r": [{"t": "今天是星期六，天氣很好。我要去朋友家。他家在學校旁邊。我坐公車去。我要買水果給他。", "qs": [{"q": "他今天要去哪裡？", "o": ["朋友家", "醫院", "學校"]}, {"q": "他怎麼去？", "o": ["坐公車", "坐火車", "坐捷運"]}, {"q": "他要買什麼？", "o": ["水果", "水", "書"]}], "th": "วันนี้วันเสาร์ อากาศดี ฉันจะไปบ้านเพื่อน บ้านเขาอยู่ข้างโรงเรียน ฉันนั่งรถเมล์ไป และจะซื้อผลไม้ให้เขา"}]}, "A2": {"c": [{"k": "完成段落", "t": "上星期我去了一家新餐廳。{1}那裡的菜很好吃，價錢也很便宜。所以我想下星期再去。", "b": [["朋友介紹我去那裡。", "我昨天買了一支手機。", "老師今天沒有來上課。"]], "th": "สัปดาห์ก่อนฉันไปร้านอาหารใหม่ เพื่อนแนะนำให้ไป อาหารที่นั่นอร่อยและราคาถูก ฉันเลยอยากไปอีกสัปดาห์หน้า"}, {"k": "選詞填空", "t": "我在台北學中文。每天早上我先去學校上課，下午在咖啡店{1}。晚上我常常和朋友一起{2}。週末如果天氣好，我們就去{3}。", "b": [["工作", "下雨", "漂亮"], ["吃飯", "醫院", "貴"], ["爬山", "手機", "星期"]], "th": "ฉันเรียนภาษาจีนที่ไทเป ทุกเช้าไปเรียน ช่วงบ่ายทำงานที่ร้านกาแฟ กลางคืนมักกินข้าวกับเพื่อน ถ้าวันหยุดอากาศดี เราไปปีนเขา"}], "r": [{"t": "王先生每天坐捷運去上班。早上人很多，所以他七點就出門。公司附近有一家便利商店，他常常在那裡買早餐。今天他忘了帶手機，所以覺得很不方便。", "qs": [{"q": "王先生為什麼七點出門？", "o": ["因為早上人很多", "因為他喜歡早起", "因為公司很遠"]}, {"q": "他常常在哪裡買早餐？", "o": ["便利商店", "餐廳", "家裡"]}, {"q": "今天他為什麼覺得不方便？", "o": ["他沒帶手機", "他沒買早餐", "他坐公車"]}], "th": "คุณหวังนั่งรถไฟฟ้าไปทำงานทุกวัน ตอนเช้าคนเยอะ เขาจึงออกจากบ้านตอนเจ็ดโมง ใกล้บริษัทมีร้านสะดวกซื้อ เขามักซื้ออาหารเช้าที่นั่น วันนี้เขาลืมเอามือถือมา เลยรู้สึกไม่สะดวก"}]}, "B1": {"c": [{"k": "選詞填空", "t": "上個月我換了新工作。剛開始很不{1}，因為每天都有很多事情要學。不過同事們都很友善，常常{2}我一起吃午餐。現在我已經慢慢{3}了公司的環境，也覺得工作越來越有意思。", "b": [["習慣", "特別", "準備", "影響"], ["邀請", "影響", "打算", "需要"], ["了解", "邀請", "打算", "決定"]], "th": "เดือนก่อนฉันเปลี่ยนงานใหม่ ช่วงแรกไม่ค่อยชินเพราะมีเรื่องต้องเรียนรู้เยอะ แต่เพื่อนร่วมงานใจดี ชวนฉันกินข้าวกลางวันบ่อย ๆ ตอนนี้ฉันค่อย ๆ เข้าใจสภาพแวดล้อมของบริษัท และรู้สึกว่างานน่าสนใจขึ้นเรื่อย ๆ"}], "r": [{"t": "小林打算下個月去台灣旅行，他已經安排好行程了。第一天他要去台北一零一，第二天想去九份看夜景，第三天坐火車去花蓮。他聽朋友說，花蓮的環境很好，空氣也很新鮮，所以特別想去看看。", "qs": [{"q": "小林第二天要做什麼？", "o": ["去九份看夜景", "坐火車去花蓮", "去台北一零一", "回家休息"]}, {"q": "他為什麼特別想去花蓮？", "o": ["聽說那裡環境很好", "朋友住在那裡", "那裡東西很便宜", "他在那裡工作"]}, {"q": "關於小林，下面哪一個正確？", "o": ["他已經安排好行程", "他還沒決定去哪裡", "他已經在台灣了", "他打算坐捷運去花蓮"]}], "th": "เสี่ยวหลินตั้งใจจะไปเที่ยวไต้หวันเดือนหน้า จัดตารางแล้ว วันแรกไปไทเป 101 วันที่สองไปจิ่วเฟิ่นดูวิวกลางคืน วันที่สามนั่งรถไฟไปฮวาเหลียน เขาได้ยินจากเพื่อนว่าฮวาเหลียนสิ่งแวดล้อมดี อากาศสดชื่น จึงอยากไปเป็นพิเศษ"}]}, "B2": {"c": [{"k": "選詞填空", "t": "現代人的{1}越來越大，很多人晚上睡不好。專家建議，{2}工作多忙，每天都應該留一點時間運動，這樣可以提高工作{3}，也對健康有幫助。", "b": [["壓力", "文化", "資源", "成績"], ["無論", "適合", "改善", "增加"], ["效率", "態度", "競爭", "資源"]], "th": "คนยุคนี้เครียดมากขึ้น หลายคนนอนไม่หลับ ผู้เชี่ยวชาญแนะนำว่าไม่ว่างานจะยุ่งแค่ไหนควรเหลือเวลาออกกำลังกายทุกวัน ช่วยเพิ่มประสิทธิภาพการทำงานและดีต่อสุขภาพ"}], "r": [{"t": "隨著網路越來越發達，很多人習慣在網路上買東西。這樣不但方便，價格也比較便宜。不過，有些人擔心商品的品質，也有人覺得網路購物會減少人和人之間的交流。因此，專家提醒大家，購物前最好先了解商家的評價。", "qs": [{"q": "網路購物有什麼好處？", "o": ["方便又比較便宜", "品質比較好", "可以認識朋友", "不用付錢"]}, {"q": "有些人擔心什麼？", "o": ["商品的品質", "價格太貴", "商店太少", "網路太慢"]}, {"q": "專家建議購物前做什麼？", "o": ["了解商家的評價", "多問朋友", "去商店看看", "等價格下降"]}], "th": "เมื่ออินเทอร์เน็ตพัฒนาขึ้น หลายคนชินกับการซื้อของออนไลน์ ทั้งสะดวกและราคาถูกกว่า แต่บางคนกังวลเรื่องคุณภาพสินค้า และบางคนคิดว่าจะทำให้คนมีปฏิสัมพันธ์กันน้อยลง ผู้เชี่ยวชาญจึงเตือนให้ศึกษารีวิวของร้านก่อนซื้อ"}]}};
+const OFF={"c": [{"t": "昨天我在整理書桌的時候，發現了一本很久沒{1}到的書。那本書是幾年{2}我父親送給我的。我打開那本書，裡面有一{3}卡片，那是父親給我的。卡片裡他{4}：「爸爸想送你最特別的十八歲生日禮物，看了好幾家店以後，{5}你買了這本書。希望這本書能{6}你明白一些道理。」看完卡片，我又把書讀了一遍。", "b": [["看", "開", "查", "遇"], ["前", "中", "上", "後"], ["張", "頁", "份", "片"], ["寫著", "說過", "讀著", "念過"], ["給", "對", "要", "向"], ["讓", "把", "被", "為"]], "k": "選詞填空", "src": "SC-TOP 模擬試題第三輯 Band B", "th": ""}, {"t": "李明的車子壞了，所以他最近{7}開車上班。李明的家{8}公司很遠，要是沒有車子的話，是很不{9}的。這個星期，李明每天早上得先坐公共汽車，{10}坐電車，才能到公司。{11}三、四天，李明覺得可以接受，但是久了他就覺得麻煩，才{12}汽車公司借他一台車，讓他能夠開車上、下班，汽車公司也答應了。", "b": [["不能", "最好", "還是", "沒空"], ["離", "從", "比", "往"], ["方便", "滿意", "容易", "放心"], ["然後", "後來", "以後", "結果"], ["頭", "第", "先", "早"], ["要求", "計畫", "忘記", "安排"]], "k": "選詞填空", "src": "SC-TOP 模擬試題第三輯 Band B", "th": ""}, {"t": "我家附近有一家書店。這家書店的客人不多，{13}書很多。書店老闆人很好，對客人總是很{14}。去那裡不一定要買書，也{15}只是看看書。在那裡看書，{16}看多久都行，沒有人會來吵你。記得有一次，書店剛開門，我{17}進去看書，不知道看了多久，{18}頭往外一看，才發現天都已經黑了。", "b": [["但是", "卻", "又", "不但"], ["客氣", "自由", "感謝", "高興"], ["可以", "會", "不必", "不該"], ["不管", "要是", "所以", "可能"], ["就", "還", "才", "再"], ["抬", "抽", "扔", "提"]], "k": "選詞填空", "src": "SC-TOP 模擬試題第三輯 Band B", "th": ""}], "r": [{"t": "根據一項芬蘭的研究發現，還在母親肚中的嬰兒，其實聽得見外界的聲音，而且會開始學習記憶。芬蘭一所大學讓三十三位懷孕母親，從懷孕二十九週到嬰兒出生那一天，每天聽一個芬蘭單字，每天重複播放同樣的聲音好幾百遍，等到嬰兒出生後，研究人員利用儀器觀察嬰兒腦部活動，記錄他們聽到聲音的反應，結果發現，嬰兒聽到過去熟悉的聲音時反應特別明顯。<br>事實上，一九八八年就已經有類似的研究發現，如果母親懷孕時喜歡看連續劇，孩子出生後也會受到影響，迷上連續劇，或是至少對於劇情中常出現的音樂或歌曲感到熟悉。<br>對此，芬蘭研究人員表示：「已經有證據顯示，在母親肚中的嬰兒會學習。而且嬰兒出生後，仍會記得當初聽過的歌曲或是某一部分的詞句。」研究人員也發現，在母親肚中就聽過同一單字的嬰兒，說出單字的能力，比沒聽過的嬰兒更好。<br>美國語言專家寇兒表示：「從研究結果來看，人類並不是出生後才開始學習語言，而是在母親肚中時就開始透過聽聲音去學習。對於人腦在發育初期就具備這項能力，我感到相當意外。」", "qs": [{"q": "文章中提到的實驗是怎麼進行的？", "o": ["讓懷孕的母親每天反覆聽單字", "用儀器讓嬰兒說話", "每天讓嬰兒聽同樣的音樂", "嬰兒出生後，每天播放一個單字"]}, {"q": "根據文章，下面哪一項是對的？", "o": ["語言專家寇兒對研究結果感到驚訝", "越早學習語言，記憶力越好", "母親看連續劇，嬰兒比較聰明", "這項研究結果跟以前的互相矛盾"]}, {"q": "這篇短文屬於以下哪一類的研究？", "o": ["人類的早期教育", "聽力障礙的症狀", "音樂對人的影響", "懷孕期間的變化"]}], "src": "SC-TOP 模擬試題第三輯 Band B", "th": ""}, {"t": "我們都知道，小時候大人說給我們聽的故事，大部分都不是真的。即使早就知道這個事實，但長大以後，當我們有了自己的小孩，還是會把聽過的故事重新說一遍，就這樣一代一代，讓故事繼續下去。這種對幻想世界的好奇心，是每個小孩最珍貴的精神財富。而一個大人在經歷無數人生中的現實之後，如果還能保留住這份天真，該是多麼難得。<br>電影《大魚》，正是在探討這樣的主題。電影描述一位非常有想像力的父親，總是告訴小兒子一些以自己為主角的神奇故事，然而隨著年齡增長，小兒子從原本對父親的敬愛和崇拜，逐漸轉變成忽視。他不喜歡父親仍然把他當小孩一樣，繼續說著那些聽起來很「誇張」的故事。父子間的關係因此越來越差，彼此甚至不再說話。直到父親去世後，在父親的葬禮上，小兒子看見父親故事裡的那些人物竟然都出席了，他才明白，父親只是希望，他始終能擁有兒時的天真。最後，他也把父親的故事，分享給了自己的孩子。", "qs": [{"q": "這篇短文主要想傳達什麼思想？", "o": ["成長過程中要保持單純不容易", "看電影和聽故事都不必太認真", "人們應該完全像小孩一樣活著", "既然長大就應該提早面對現實"]}, {"q": "請問下面哪一段文字最符合第二段中所說的「主題」？", "o": ["失去的童心", "睡前聽故事", "孝順父母親", "哲學的智慧"]}, {"q": "根據短文，為什麼小兒子後來和父親的關係不好？", "o": ["他一直都誤會父親", "他覺得父親不關心他", "他父親很少再和他講故事", "他父親是個不切實際的人"]}], "src": "SC-TOP 模擬試題第三輯 Band B", "th": ""}, {"t": "有時在外面用餐，總是想念著七零年代那時流行的美式早餐。餐廳裡的裝飾普通，餐桌很大，椅子兩兩相對。只要客人坐下來，服務人員就先給你一杯味道淡得像水一樣的美式熱咖啡，然後二話不說，不論你點什麼，先送上一些烤吐司和炒蛋；然後開始登場的是主要食物——煎香腸，培根或火腿，旁邊放著一大堆像座小山一樣的馬鈴薯，還附上蜂蜜、果醬、奶油等一堆配料。<br>那樣的早餐其實大多是吃不完的，至於好不好吃倒也沒那麼重要，但那種熱騰騰的氣氛，讓人一整天都覺得特別幸福。<br>後來，義大利式連鎖店漸漸地代替美式早餐店，在每個城市流行起來。早餐一杯義式咖啡加上一份麵包，吃一個算一個的錢，加上漂亮的裝潢與浪漫的音樂，在某一方面是精緻、好看多了，也環保得多，但那份充滿熱情的文化卻也逐漸消失中。", "qs": [{"q": "作者覺得美式早餐的特色是什麼？", "o": ["量多", "味道佳", "作法精緻", "環境優雅"]}, {"q": "作者認為義大利式連鎖咖啡店的早餐缺少了什麼？", "o": ["熱鬧的感覺", "豐富的配料", "漂亮的裝飾", "廣闊的用餐環境"]}, {"q": "這篇文章的作者主要想說明什麼？", "o": ["飲食文化的轉變", "選擇早餐的標準", "現代人的飲食習慣", "早餐店成功的秘訣"]}], "src": "SC-TOP 模擬試題第三輯 Band B", "th": ""}, {"t": "300 多年前，歐洲到處都出現小麥產量過少的狀況，當時，馬鈴薯剛從美洲傳入歐洲，有位國王一接觸到馬鈴薯，就認為這神奇的作物正是國家的救星，不但種起來容易，蟲又少，吃了也容易讓人有飽足的感覺，相當適合代替麵包成為主要食物，因此下令推廣全國。他在公告裡寫著：「馬鈴薯是個容易種、而且營養豐富的食物，希望大家多種、多吃，這樣一來就能解決麵粉不夠的問題了。」<br>沒想到公告以後，「市場反應」卻讓國王很意外，幾乎沒有人願意在家種馬鈴薯，大部分的民眾不願改變以麵包作為主食的習慣。國王幾天後又想出新的對策。他又發布了新命令：「馬鈴薯是國王專屬的食物，一般人不可以吃。」還準備了一塊很大的田專門種馬鈴薯，派了幾名軍人在那兒看著。<br>命令公告後，很多民眾心裡想，「馬鈴薯有什麼了不起？為什麼只有國王可以吃？」大家都想吃吃看，很多人到國王的田裡偷馬鈴薯回家種，倒是在那兒的軍人都睜一隻眼閉一隻眼地讓民眾偷。幾個月過去了，馬鈴薯就這樣成了這個國家常見的農作物。", "qs": [{"q": "關於國王想推廣馬鈴薯的原因，沒提到下面哪一項？", "o": ["味道和麵包非常搭配", "能當作主要的食物", "不必花太多力氣照顧", "希望讓人民少用麵粉"]}, {"q": "第二段中的「市場反應」指的是什麼？", "o": ["人民認為馬鈴薯無法取代麵包", "一般人吃不起馬鈴薯", "沒有人願意賣馬鈴薯", "農民認為馬鈴薯不容易種"]}, {"q": "國王能推廣成功，主要是對人民使用了哪種策略？", "o": ["引起人民對馬鈴薯的好奇心", "強調吃馬鈴薯的好處", "強迫他們不得不接受命令", "強調小麥不足如何影響生活"]}, {"q": "這個故事主要在說明什麼？", "o": ["馬鈴薯開始流行的原因", "人民改變飲食習慣的目的", "馬鈴薯對歐洲人民有什麼好處", "國王對食物的愛好如何影響人民"]}], "src": "SC-TOP 模擬試題第三輯 Band B", "th": ""}]};
+['B1','B2'].forEach(k=>{P[k].c.push(...OFF.c);P[k].r.push(...OFF.r)});
+let mode='learn',sub='card',cur=0,flip=false,pg=null,ans=[],chk=false,M=null,tmr=null;
+const band=()=>S.lv[0]==='A'?3:4;
+function mk(sayT,p,opts,ex){const o=sh(opts);return{say:sayT,p,o,a:o.indexOf(opts[0]),ex}}
+const mkq=(p,o,ex)=>mk(null,p,o.slice(0,band()),ex);
+function gapQ(r){const x=mkq('<div class="sent zh">'+r[0].replace('___','<span class="gap"> </span>')+'</div>',r[1],r[0].replace('___',r[1][0])+' = '+r[2]);x.fill=1;x.pyl=SP[r[0]]||'';return x}
+function wordQ(){const l=lv(),w=pick(l.w);const x=mk(null,'<div class="big zh" style="font-size:2.6rem">'+w[0]+'</div>',[w[3],...sh(l.w.filter(y=>y[3]!==w[3])).slice(0,band()-1).map(y=>y[3])],w[0]+' = '+w[3]);x.pyl=w[1];return x}
+const blk=t=>t.replace(/\{(\d)\}/g,'<b class="blk">($1)</b>');
+const clozePg=c=>({sec:c.k+(c.src?' · '+c.src:''),ctx:blk(c.t),th:c.th,qs:c.b.map((o,j)=>mkq('第 '+(j+1)+' 格',o,'('+(j+1)+') '+o[0]))});
+const readPg=c=>({sec:'閱讀理解'+(c.src?' · '+c.src:''),ctx:c.t,th:c.th,qs:c.qs.map(q=>mkq(q.q,q.o,q.o[0]))});
+const gapPg=()=>({sec:'選詞填空（單句）',qs:lv().r.map(gapQ)});
+const pPages=()=>[...P[S.lv].c.map(clozePg),...P[S.lv].r.map(readPg)];
+const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+function setHTML(g,a,ck,fn){return `<div class="card">${g.sec?`<div class="mute" style="font-size:.85rem;margin-bottom:6px">${g.sec}</div>`:''}${g.ctx?`<div class="zh psg">${g.ctx}</div>`:''}${g.qs.map((x,j)=>`<div style="margin-top:14px"><b>${g.qs.length>1||g.ctx?(j+1)+'.':''}</b> ${rbody(x)}${x.o.map((c,i)=>`<button class="b opt zh ${ck?(i===x.a?'right':i===a[j]?'wrong':''):(i===a[j]?'sel':'')}" ${ck?'disabled':''} onclick="${fn}(${j},${i})">${'ABCD'[i]}. ${c}${S.rpy&&x.fill&&PY[c]?` <small class="mute">${PY[c]}</small>`:''}</button>`).join('')}</div>`).join('')}</div>`}
+function pickWord(ex){const idx=lv().w.map((w,i)=>i).filter(i=>i!==ex),pool=idx.filter(i=>(S.box[lv().w[i][0]]||0)<3);return pick(pool.length?pool:idx)}
+function setLv(k){S.lv=k;save();M=null;clearInterval(tmr);pg=null;cur=pickWord(-1);flip=false;render()}
+function chrome(){$('#chips').innerHTML=Object.keys(L).map(k=>`<button class="chip ${k===S.lv?'on':''}" onclick="setLv('${k}')"><b>${k}</b><small>${L[k].s}</small></button>`).join('');
+const k=lv().w.filter(w=>(S.box[w[0]]||0)>=3).length,t=st();
+$('#stats').innerHTML=`<div class="stat">จำได้แล้ว<b>${k}/${lv().w.length}</b></div><div class="stat">ทำแบบฝึกหัด<b>${t.n}</b></div><div class="stat">ตอบถูก<b>${t.n?Math.round(t.ok/t.n*100)+'%':'–'}</b></div>`;
+document.querySelectorAll('#mnav button').forEach(b=>b.classList.toggle('on',b.dataset.m===mode))}
+function grade(){chk=true;const t=st();pg.qs.forEach((x,j)=>{t.n++;if(ans[j]===x.a)t.ok++});save()}
+function pp(j,i){if(chk)return;ans[j]=i;if(sub==='gap')grade();render()}
+function render(){chrome();const v=$('#view');if(mode==='mock')return mockView(v);
+const nav=`<nav class="sub">${[['card','การ์ดคำศัพท์'],['gap','ฝึกเติมคำ'],['pass','ฝึกบทความ']].map(([k,t])=>`<button class="${k===sub?'on':''}" onclick="sub='${k}';pg=null;render()">${t}</button>`).join('')}</nav>`;
+if(sub==='card'){const w=lv().w[cur];
+v.innerHTML=nav+`<div class="tog"><label><input type="checkbox" ${S.py?'checked':''} onchange="S.py=this.checked;save();render()"> พินอิน</label><label><input type="checkbox" ${S.zy?'checked':''} onchange="S.zy=this.checked;save();render()"> จู้อิน</label></div>
+<div class="card" onclick="flip=!flip;render()" style="cursor:pointer"><div class="big zh">${w[0]}</div>${S.py?`<div class="py">${w[1]}</div>`:''}${S.zy?`<div class="zy">${w[2]}</div>`:''}<div class="th">${flip?w[3]:'<span class="mute" style="font-size:1rem;font-weight:400">แตะการ์ดเพื่อดูความหมาย</span>'}</div></div>
+<div class="row"><button class="b" onclick="say(lv().w[cur][0])">🔊 ฟังเสียง</button></div>
+<div class="row"><button class="b" onclick="rate(0)">ยังจำไม่ได้</button><button class="b pri" onclick="rate(1)">จำได้แล้ว</button></div>`;return}
+if(!pg){pg=sub==='gap'?{qs:[Math.random()<.6?gapQ(pick(lv().r)):wordQ()]}:pick(pPages());ans=[];chk=false}
+let h=nav+(sub==='gap'?pyBox():'<p class="mute cen" style="font-size:.85rem;margin:0 0 10px">บทความไม่มีพินอิน เหมือนข้อสอบจริง ต้องอ่านเอง</p>')+setHTML(pg,ans,chk,'pp');
+if(sub==='gap'&&chk)h+=`<div class="fb zh">${pg.qs[0].ex}</div><div class="row"><button class="b pri" onclick="pg=null;render()">ข้อต่อไป</button></div>`;
+if(sub==='pass'){if(!chk)h+=`<div class="row"><button class="b pri" onclick="grade();render()">ตรวจคำตอบ</button></div>`;
+else{const k=pg.qs.filter((x,j)=>ans[j]===x.a).length;h+=`<div class="card" style="margin-top:12px"><b>ถูก ${k}/${pg.qs.length}</b>${pg.th?'<br><span class="mute">แปลบทความ:</span> '+pg.th:''}</div><div class="row"><button class="b pri" onclick="pg=null;render()">ทำชุดต่อไป</button></div>`}}
+v.innerHTML=h}
+function rate(g){const k=lv().w[cur][0];S.box[k]=g?Math.min((S.box[k]||0)+1,4):0;save();cur=pickWord(cur);flip=false;render()}
+// ---------- จำลองสอบ (อ่านอย่างเดียว) ----------
+function startMock(){const pgs=[gapPg(),...pPages()],n=pgs.reduce((t,g)=>t+g.qs.length,0);M={pgs,i:0,a:pgs.map(()=>[]),n,min:Math.ceil(n*1.2),ph:'run'};M.end=Date.now()+M.min*60000;clearInterval(tmr);tmr=setInterval(tick,1000);window.scrollTo(0,0);render()}
+function tick(){const s=Math.max(0,Math.round((M.end-Date.now())/1000)),e=$('#tm');if(e)e.textContent=fmt(s);if(s<=0)finish()}
+const mscore=(g,i)=>g.qs.filter((x,j)=>M.a[i][j]===x.a).length;
+function finish(){clearInterval(tmr);M.ph='done';const t=M.pgs.reduce((c,g,i)=>c+mscore(g,i),0);S.bestR[S.lv]=Math.max(S.bestR[S.lv]||0,Math.round(t/M.n*100));save();window.scrollTo(0,0);render()}
+function mp(j,i){M.a[M.i][j]=i;render()}
+function go(d){M.i+=d;window.scrollTo(0,0);render()}
+function mockView(v){
+if(!M){const b=S.bestR[S.lv],A=S.lv[0]==='A';v.innerHTML=`<div class="card"><h2 style="margin:0 0 8px">จำลองข้อสอบอ่าน ระดับ ${S.lv} (${lv().s})</h2>
+<p>จัดข้อสอบตามโครงสร้างของ ${A?'Band A: เลือกคำเติมประโยค → เติมย่อหน้า → เลือกคำเติมในบทความ → อ่านจับใจความ (ตัวเลือก 3 ข้อ)':'Band B: เลือกคำเติม → อ่านจับใจความ (ตัวเลือก 4 ข้อ)'} โดยมี passage ให้อ่านและเติมคำ</p>
+<p class="mute">จับเวลาตามสัดส่วนข้อสอบจริง (ประมาณ 1.2 นาทีต่อข้อ) ไม่เฉลยระหว่างสอบ ย้อนกลับไปแก้ได้ หมดเวลาแล้วส่งอัตโนมัติ</p>${A?'':'<p class="mute" style="font-size:.85rem">B1/B2 รวมโจทย์จากชุดข้อสอบจำลอง Band B ของ SC-TOP (ชุดที่ 3) ฉบับที่เป็นตัวอักษร</p>'}
+<p class="mute" style="font-size:.85rem">ข้อสอบจริง Band A มี 50 ข้อ (ปรนัยสามตัวเลือก 40 ข้อ สี่ตัวเลือก 5 ข้อ และจับคู่ 5 ข้อ) ส่วน Band B มี 50 ข้อสี่ตัวเลือก ใช้เวลา 60 นาที ชุดนี้เป็นฉบับย่อ ยังไม่มีส่วนดูภาพและข้อจับคู่</p>
+${b!=null?`<p>คะแนนสูงสุดของระดับนี้: <b>${b}%</b></p>`:''}<div class="row"><button class="b pri" onclick="startMock()">เริ่มทำข้อสอบ</button></div></div>`;return}
+if(M.ph==='done'){const t=M.pgs.reduce((c,g,i)=>c+mscore(g,i),0),pct=Math.round(t/M.n*100);
+const rv=M.pgs.map((g,i)=>{const w=g.qs.map((x,j)=>[x,j]).filter(([x,j])=>M.a[i][j]!==x.a);return w.length?`<div class="rv"><b>${g.sec}</b>${w.map(([x,j])=>`<div style="margin-top:6px">ข้อ ${j+1} · <span class="zh">${x.ex}</span><br><span class="mute">คุณตอบ: ${M.a[i][j]==null?'ไม่ได้ตอบ':x.o[M.a[i][j]]} · ที่ถูก: ${x.o[x.a]}</span></div>`).join('')}${g.th?`<div class="mute" style="margin-top:6px;font-size:.85rem">แปลบทความ: ${g.th}</div>`:''}</div>`:''}).join('');
+v.innerHTML=`<div class="card"><p class="cen mute" style="margin:0">ผลจำลองสอบอ่าน ระดับ ${S.lv}</p><div class="score">${t}/${M.n}</div><p class="cen">${pct}%</p>
+<p class="cen mute" style="font-size:.85rem">${M.pgs.map((g,i)=>g.sec+' '+mscore(g,i)+'/'+g.qs.length).join(' · ')}</p>
+<p class="mute cen" style="font-size:.85rem">เกณฑ์ผ่านจริงเป็นคะแนนสเกลของ TOCFL ตัวเลขนี้ใช้ดูพัฒนาการเท่านั้น ไม่ใช่การทำนายว่าสอบผ่าน</p>
+${rv?`<h3 style="margin:14px 0 0">ข้อที่ผิด / ไม่ได้ตอบ</h3>${rv}`:'<p class="cen"><b>ถูกทุกข้อ</b></p>'}<div class="row"><button class="b pri" onclick="M=null;render()">กลับ</button><button class="b" onclick="startMock()">สอบอีกชุด</button></div></div>`;return}
+const g=M.pgs[M.i],last=M.i===M.pgs.length-1,sec=Math.max(0,Math.round((M.end-Date.now())/1000));
+v.innerHTML=(M.i===0?pyBox():'')+`<div class="bar"><span>หน้า ${M.i+1}/${M.pgs.length}</span><span id="tm">${fmt(sec)}</span></div>`+setHTML(g,M.a[M.i],false,'mp')+
+`<div class="row">${M.i>0?`<button class="b" onclick="go(-1)">ก่อนหน้า</button>`:''}${last?`<button class="b pri" onclick="finish()">ส่งข้อสอบ</button>`:`<button class="b pri" onclick="go(1)">ถัดไป</button>`}</div>`}
+$('#mnav').onclick=e=>{const m=e.target.dataset.m;if(!m)return;if(M&&M.ph==='run'&&m==='learn'&&!confirm('ออกจากการสอบ? ความคืบหน้าจะหายไป'))return;mode=m;pg=null;if(m==='learn'){M=null;clearInterval(tmr)}render()};
+cur=pickWord(-1);render();
+</script>
+</body>
+</html>
